@@ -1,1 +1,0 @@
-# Frontend-Hawaiian-Homes-Tracker
