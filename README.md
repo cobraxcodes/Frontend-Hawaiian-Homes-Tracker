@@ -10,8 +10,8 @@ This app serves to tie with the previously created backend API and serve as the 
 React, Tailwind, Vite, react-router-dom, HTML, CSS, Javascript, lazy-loading, Vitest, Cypress, 
 
 ## WIREFRAME
-[Wireframe Link](https://www.figma.com/design/FHDxiXAG9o5T7hcL21rkSd/Hawaiian-Homes-Tracker-Frontend?node-id=0-1&t=rF6TZyf37axSCEBn-1)
-##
+[Link To Figma](https://www.figma.com/design/FHDxiXAG9o5T7hcL21rkSd/Hawaiian-Homes-Tracker-Frontend?node-id=0-1&t=rF6TZyf37axSCEBn-1)
+
 ![Landing Page](./frontend-hawaiianhomestracker/public/wireframe1.png)
 
 
