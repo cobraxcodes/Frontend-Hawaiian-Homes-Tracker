@@ -11,7 +11,6 @@ function App(){
     <BrowserRouter>
      <Header/>
     <Hero />
-    
     <Routes>
     </Routes>
 
