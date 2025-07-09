@@ -1,4 +1,5 @@
-'use client'
+import Resources from './Resources'
+import {Link} from 'react-router-dom'
 
 import { useState } from 'react'
 import {
@@ -17,18 +18,15 @@ import {
   Bars3Icon,
   BookOpenIcon,
   DocumentMagnifyingGlassIcon,
-  CalendarDaysIcon,
   BoltIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon,  } from '@heroicons/react/20/solid'
 
 const products = [
-  { name: 'Application Date', description: 'See how far back these applications are', href: '#', icon: CalendarDaysIcon },
   { name: 'Last Name', description: 'Search for an application through last name lookup', href: '#', icon: BookOpenIcon },
   { name: 'Rank', description: 'Search through applications by rankings per zipcode', href: '#', icon: BoltIcon },
   { name: 'Zipcode', description: 'Enter a zipcode to get all applications within that county', href: '#', icon: DocumentMagnifyingGlassIcon },
-//   { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
 ]
 
 export default function Header() {
@@ -39,13 +37,8 @@ export default function Header() {
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
             <span className="sr-only">Hawaiian Homes Tracker</span>
-             <a href="#" className="text-sm/6 font-semibold text-gray-900">
+             <a href="#home" className="text-sm/6 font-semibold text-gray-900">
             Hawaiian Homes Tracker
-            {/* <img
-              alt=""
-              src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-8 w-auto"
-            /> */}
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -88,25 +81,13 @@ export default function Header() {
                   </div>
                 ))}
               </div>
-              <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                {/* {callsToAction.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
-                  >
-                    <item.icon aria-hidden="true" className="size-5 flex-none text-gray-400" />
-                    {item.name}
-                  </a>
-                ))} */}
-              </div>
             </PopoverPanel>
           </Popover>
 
           <a href="#" className="text-sm/6 font-semibold text-gray-900">
             Apply 
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="#resources" className="text-sm/6 font-semibold text-gray-900">
             Resources
           </a>
           <a href="#" className="text-sm/6 font-semibold text-gray-900">

@@ -16,6 +16,7 @@ function App(){
     <Resources />
     
     <Routes>
+      <Route path='/resources' element={<Resources/>}/>
     </Routes>
 
 
