@@ -1,6 +1,3 @@
-import Resources from './Resources'
-import {Link} from 'react-router-dom'
-
 import { useState } from 'react'
 import {
   Dialog,
@@ -37,7 +34,7 @@ export default function Header() {
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
             <span className="sr-only">Hawaiian Homes Tracker</span>
-             <a href="#home" className="text-sm/6 font-semibold text-gray-900">
+             <a href="/" className="text-sm/6 font-semibold text-gray-900">
             Hawaiian Homes Tracker
           </a>
         </div>
