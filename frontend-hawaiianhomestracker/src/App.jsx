@@ -1,29 +1,31 @@
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
+import { lazy, Suspense } from 'react'
 import Header from './Header'
 import { Footer } from './Footer'
-import Hero from './Hero'
 import Resources from './Resources'
-import History from './History'
+import Home from './Home'
+
+
+const LastName = lazy(() => import ('./search/LastName'))
 
 
 function App(){
    return(
-    <>
     <BrowserRouter>
      <Header/>
-    <Hero />
-    <History/>
-    <Resources />
+
     
     <Routes>
+      <Route path='/' element={<Home/>}/>
       <Route path='/resources' element={<Resources/>}/>
+      <Route path='/lastName' element={<Suspense fallback={<p>Loading ...</p>}><LastName/></Suspense>}/>
     </Routes>
 
 
 
     <Footer/>
     </BrowserRouter>
-    </>
+    
    )
 }
 
