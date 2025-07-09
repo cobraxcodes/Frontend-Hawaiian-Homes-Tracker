@@ -6,24 +6,28 @@ import cardFour from './assets/cardFour.jpg'
 
 const resources = [
   {
+    id:0,
     name: 'Apply For Hawaiian Homes',
     href: '#',
     imageSrc: cardOne,
     description: '',
   },
   {
+    id:1,
     name: 'Be Informed',
     href: '#',
     imageSrc: cardTwo,
     description: "List of tenant's rights or available grants, loans, or financial aid programs for homesteaders"
   },
 {
+    id:2,
     name: 'Emergency Rental and Utilities',
     href: '#',
     imageSrc: cardThree,
     description: 'State provided assistance '
 },
 {
+   id:3,
     name: 'Website Updates',
     href: '#',
     imageSrc: cardFour,
@@ -40,7 +44,7 @@ export default function Resources() {
 
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {resources.map((resources) => (
-            <div className="group relative">
+            <div key={resources.id} className="group relative">
               <img
                 src={resources.imageSrc}
                 className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80"

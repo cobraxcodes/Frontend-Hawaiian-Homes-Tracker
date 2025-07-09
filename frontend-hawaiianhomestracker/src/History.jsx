@@ -30,10 +30,10 @@ Recognizing this crisis, Prince Jonah Kūhiō Kalaniana‘ole, a Native Hawaiian
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                   In 1921, Congress passed the Hawaiian Homes Commission Act (HHCA), signed into law by President Warren G. Harding. </p>
                   <ul>
-                    <li class="list-disc list-inside m-2 text-gray-600">Set aside about 203,500 acres of public lands in Hawaii for lease to Native Hawaiians.</li>
-                    <li class="list-disc list-inside m-2 text-gray-600">Defined "Native Hawaiian" as any descendant with at least 50% Hawaiian blood quantum.</li>
-                    <li class="list-disc list-inside m-2 text-gray-600">Created a land trust system where Native Hawaiians could lease homestead land for residential, agricultural, or pastoral purposes for $1 per year long-term leases.</li>
-                    <li class="list-disc list-inside m-2 text-gray-600">Intended to rehabilitate Native Hawaiians and reconnect them to the land for cultural, social, and economic survival.</li>
+                    <li className="list-disc list-inside m-2 text-gray-600">Set aside about 203,500 acres of public lands in Hawaii for lease to Native Hawaiians.</li>
+                    <li className="list-disc list-inside m-2 text-gray-600">Defined "Native Hawaiian" as any descendant with at least 50% Hawaiian blood quantum.</li>
+                    <li className="list-disc list-inside m-2 text-gray-600">Created a land trust system where Native Hawaiians could lease homestead land for residential, agricultural, or pastoral purposes for $1 per year long-term leases.</li>
+                    <li className="list-disc list-inside m-2 text-gray-600">Intended to rehabilitate Native Hawaiians and reconnect them to the land for cultural, social, and economic survival.</li>
                   </ul>
               </div>
               <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
@@ -63,13 +63,13 @@ Recognizing this crisis, Prince Jonah Kūhiō Kalaniana‘ole, a Native Hawaiian
                 <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
                   Ongoing Challenges
                 </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                {/* <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center"> */}
                   <ul>
-                    <li class="list-disc list-inside m-2 text-gray-600">A high waitlist of applicants, some waiting lifetimes for a lease</li>
-                    <li class="list-disc list-inside m-2 text-gray-600">Issues with underfunding, infrastructure development, and bureaucracy</li>
-                    <li class="list-disc list-inside m-2 text-gray-600">The controversial blood quantum requirement (50% minimum) continues to exclude many Native Hawaiians with lower ancestry percentages, while risking the trust’s future sustainability as demographics shift</li>
+                    <li className="list-disc list-inside m-2 text-gray-600">A high waitlist of applicants, some waiting lifetimes for a lease</li>
+                    <li className="list-disc list-inside m-2 text-gray-600">Issues with underfunding, infrastructure development, and bureaucracy</li>
+                    <li className="list-disc list-inside m-2 text-gray-600">The controversial blood quantum requirement (50% minimum) continues to exclude many Native Hawaiians with lower ancestry percentages, while risking the trust’s future sustainability as demographics shift</li>
                   </ul>
-                </p>
+                {/* </p> */}
               </div>
             </div>
             <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5 max-lg:rounded-b-4xl lg:rounded-r-4xl" />
