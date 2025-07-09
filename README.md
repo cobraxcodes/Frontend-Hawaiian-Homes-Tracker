@@ -4,6 +4,11 @@ Inspired by the Hawaiian Homes Commision Act, this project addresses the lack of
 This app serves to tie with the previously created backend API and serve as the front end of the Hawaiian Homes Tracker web application.
 
 ## Live demo link
+![Landing Page](./frontend-hawaiianhomestracker/public/wireframe1.png)
+![Landing Page](./frontend-hawaiianhomestracker/public/wireframe2.png)
+![Login Page](./frontend-hawaiianhomestracker/public/wireframe3.png)
+![Search Page](./frontend-hawaiianhomestracker/public/wireframe4.png)
+
 
 
 ## Technologies Used
