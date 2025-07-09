@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 import axios from 'axios'
 import { useState } from "react";
 export default function LastName(){
@@ -21,7 +20,7 @@ export default function LastName(){
 
    // use usequery here
    const {data,isLoading,isError,error} = useQuery({
-    queryKey: ['applications', input,page],
+    queryKey: ['applications', input, page],
     queryFn: () => fetchData(input,page),
     refetchOnWindowFocus: false,
     keepPreviousData: true
@@ -52,13 +51,11 @@ export default function LastName(){
          <>
        <div className="mb-8 text-center">
        <h1 className="text-3xl font-bold text-gray-900  mt-24">Search By Last Name</h1>
-       <div></div>
        </div>
-  <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-
-
+ 
 
     {/* Search Form */}
+     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
     <form className="max-w-md mx-auto mb-12" onSubmit={handleInput}>
       <label htmlFor="lastname-search" className="mb-2 text-sm font-medium text-gray-900 sr-only">
         Search Last Name

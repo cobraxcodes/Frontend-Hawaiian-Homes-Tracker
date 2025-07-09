@@ -1,4 +1,5 @@
 import { CloudArrowUpIcon, LockClosedIcon, BellAlertIcon } from '@heroicons/react/20/solid'
+import {Link} from 'react-router-dom'
 import heroImg from './assets/heroImg.jpg'
 
 const features = [
@@ -45,9 +46,11 @@ export default function Hero() {
                 ))}
               </dl>
               <div className="mt-8 flex justify-center">
-                 <button className="bg-green-900 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-full">
-                Search Applications
+                <Link to={'/all'}>
+                 <button className="bg-green-900 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-full" href='/all'>
+                View All Applications
                 </button>
+                </Link>
               </div>
             </div>
           </div>

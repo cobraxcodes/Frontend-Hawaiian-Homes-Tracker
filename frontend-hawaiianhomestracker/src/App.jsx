@@ -6,7 +6,9 @@ import Resources from './Resources'
 import Home from './Home'
 
 
+//lazy load applications
 const LastName = lazy(() => import ('./search/LastName'))
+const AllApplications = lazy(() => import('./search/AllApplications'))
 
 
 function App(){
@@ -19,6 +21,7 @@ function App(){
       <Route path='/' element={<Home/>}/>
       <Route path='/resources' element={<Resources/>}/>
       <Route path='/lastName' element={<Suspense fallback={<p>Loading ...</p>}><LastName/></Suspense>}/>
+      <Route path='/all' element={<Suspense fallback={<p>Loading...</p>}><AllApplications/></Suspense>}/>
     </Routes>
 
 
