@@ -3,6 +3,7 @@ import Header from './Header'
 import { Footer } from './Footer'
 import { Context } from './Context'
 import Hero from './Hero'
+import Resources from './Resources'
 
 
 function App(){
@@ -11,6 +12,9 @@ function App(){
     <BrowserRouter>
      <Header/>
     <Hero />
+    <Resources />
+
+    
     <Routes>
     </Routes>
 
