@@ -4,12 +4,9 @@ Inspired by the Hawaiian Homes Commision Act, this project addresses the lack of
 This app serves to tie with the previously created backend API and serve as the front end of the Hawaiian Homes Tracker web application.
 
 ## Live demo link
+[Wireframe Link](https://www.figma.com/design/FHDxiXAG9o5T7hcL21rkSd/Hawaiian-Homes-Tracker-Frontend?node-id=0-1&t=rF6TZyf37axSCEBn-1)
 ![Landing Page](./frontend-hawaiianhomestracker/public/wireframe1.png)
-![Landing Page](./frontend-hawaiianhomestracker/public/wireframe2.png)
 ![Login Page](./frontend-hawaiianhomestracker/public/wireframe3.png)
-![Search Page](./frontend-hawaiianhomestracker/public/wireframe4.png)
-
-
 
 ## Technologies Used
 React, Tailwind, Vite, react-router-dom, HTML, CSS, Javascript, lazy-loading, Vitest, Cypress, 
