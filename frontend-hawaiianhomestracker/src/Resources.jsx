@@ -1,5 +1,7 @@
 import cardOne from './assets/cardOne.jpg'
 import cardTwo from './assets/cardTwo.jpeg'
+import cardThree from './assets/cardThree.jpg'
+import cardFour from './assets/cardFour.jpg'
 
 
 const resources = [
@@ -7,25 +9,25 @@ const resources = [
     name: 'Apply For Hawaiian Homes',
     href: '#',
     imageSrc: cardOne,
-    description: 'i am a text placeholder',
+    description: '',
   },
   {
     name: 'Be Informed',
     href: '#',
     imageSrc: cardTwo,
-    description: 'i am a text placeholder'
+    description: "List of tenant's rights or available grants, loans, or financial aid programs for homesteaders"
   },
 {
-    name: 'Be Informed',
+    name: 'Emergency Rental and Utilities',
     href: '#',
-    imageSrc: cardTwo,
-    description: 'i am a text placeholder'
+    imageSrc: cardThree,
+    description: 'State provided assistance '
 },
 {
-    name: 'Be Informed',
+    name: 'Website Updates',
     href: '#',
-    imageSrc: cardTwo,
-    description: 'i am a text placeholder'
+    imageSrc: cardFour,
+    description: 'Click here to stay updated on any upcoming updates to the website or applications.'
 }
   // More products...
 ]
