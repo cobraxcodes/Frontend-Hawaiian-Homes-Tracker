@@ -24,7 +24,7 @@ import { ChevronDownIcon,  } from '@heroicons/react/20/solid'
 const products = [
   { name: 'Area Code', description: 'Enter desired area code to see rank by area', href: '#', icon: MapPinIcon },
   { name: 'Last Name', description: 'Search for an application through last name lookup', href: '/lastName', icon: BookOpenIcon },
-  // { name: 'Rank', description: 'Search through applications by rankings per zipcode', href: '/ranks', icon: BoltIcon },
+  { name: 'Rank', description: 'Search through applications by rankings per zipcode', href: '#', icon: BoltIcon },
   { name: 'Zipcode', description: 'Enter a zipcode to get all applications within that county', href: '/zipcode', icon: DocumentMagnifyingGlassIcon },
 ]
 
@@ -83,7 +83,7 @@ export default function Header() {
             </PopoverPanel>
           </Popover>
 
-          <a href="https://dhhl.hawaii.gov/applications/applying-for-hawaiian-home-lands/" className="text-sm/6 font-semibold text-gray-900">
+          <a href="https://dhhl.hawaii.gov/applications/applying-for-hawaiian-home-lands/"  target= "_blank" className="text-sm/6 font-semibold text-gray-900">
             Apply 
           </a>
           <a href="#resources" className="text-sm/6 font-semibold text-gray-900">

@@ -1,6 +1,6 @@
-import Hero from "./Hero";
-import History from "./History";
-import Resources from "./Resources";
+import Hero from "./landing/Hero"
+import History from "./landing/History";
+import Resources from "./landing/Resources";
 
 export default function Home(){
     return(

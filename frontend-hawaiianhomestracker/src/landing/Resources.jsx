@@ -1,14 +1,14 @@
-import cardOne from './assets/cardOne.jpg'
-import cardTwo from './assets/cardTwo.jpeg'
-import cardThree from './assets/cardThree.jpg'
-import cardFour from './assets/cardFour.jpg'
+import cardOne from '../assets/cardOne.jpg'
+import cardTwo from '../assets/cardTwo.jpeg'
+import cardThree from '../assets/cardThree.jpg'
+import cardFour from '../assets/cardFour.jpg'
 
 
 const resources = [
   {
     id:0,
     name: 'Apply For Hawaiian Homes',
-    href: '#',
+    href: 'https://dhhl.hawaii.gov/applications/applying-for-hawaiian-home-lands/" ' ,
     imageSrc: cardOne,
     description: '',
   },
@@ -52,7 +52,7 @@ export default function Resources() {
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">
-                    <a href={resources.href}>
+                    <a href={resources.href} target='_blank'>
                       <span aria-hidden="true" className="absolute inset-0" />
                       {resources.name}
                     </a>

@@ -1,8 +1,8 @@
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import { lazy, Suspense } from 'react'
-import Header from './Header'
-import { Footer } from './Footer'
-import Resources from './Resources'
+import Header from './landing/Header'
+import Footer from './landing/Footer'
+import Resources from './landing/Resources'
 import Home from './Home'
 
 

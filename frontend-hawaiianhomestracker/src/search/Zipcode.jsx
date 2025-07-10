@@ -80,7 +80,7 @@ export default function Zipcode(){
 
 
     {/* Loading / Error States */}
-    {isLoading && <p className="text-center">Finding Applications with from zipcode {input}</p>}
+    {isLoading && <p className="text-center">Finding Applications from zipcode {input}</p>}
     {isError && (
       <p className="text-red-600 text-center">
         {error.response?.status === 404

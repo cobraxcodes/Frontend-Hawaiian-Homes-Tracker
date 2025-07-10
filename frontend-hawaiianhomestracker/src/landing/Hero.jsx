@@ -1,6 +1,6 @@
 import { CloudArrowUpIcon, LockClosedIcon, BellAlertIcon } from '@heroicons/react/20/solid'
 import {Link} from 'react-router-dom'
-import heroImg from './assets/heroImg.jpg'
+import heroImg from '../assets/heroImg.jpg'
 
 const features = [
   {
