@@ -9,6 +9,8 @@ import Home from './Home'
 //lazy load applications
 const LastName = lazy(() => import ('./search/LastName'))
 const AllApplications = lazy(() => import('./search/AllApplications'))
+const Rank = lazy(() => import('./search/RankSearch'))
+const Zipcode = lazy(() => import('./search/Zipcode'))
 
 
 function App(){
@@ -22,6 +24,8 @@ function App(){
       <Route path='/resources' element={<Resources/>}/>
       <Route path='/lastName' element={<Suspense fallback={<p>Loading ...</p>}><LastName/></Suspense>}/>
       <Route path='/all' element={<Suspense fallback={<p>Loading...</p>}><AllApplications/></Suspense>}/>
+      <Route path='/ranks' element={<Suspense fallback={<p>Loading Applications</p>}><Rank/></Suspense>}/>
+      <Route path='/zipcode' element={<Suspense fallback={<p>Loading Applications</p>}><Zipcode/></Suspense>}/>
     </Routes>
 
 
