@@ -22,7 +22,7 @@ import {
 import { ChevronDownIcon,  } from '@heroicons/react/20/solid'
 
 const products = [
-  { name: 'Area Code', description: 'Enter desired area code to see rank by area', href: '#', icon: MapPinIcon },
+  { name: 'Area Code', description: 'Enter desired area code to see rank by area', href: '/areacode', icon: MapPinIcon },
   { name: 'Last Name', description: 'Search for an application through last name lookup', href: '/lastName', icon: BookOpenIcon },
   { name: 'Rank', description: 'Search through applications by rankings per zipcode', href: '#', icon: BoltIcon },
   { name: 'Zipcode', description: 'Enter a zipcode to get all applications within that county', href: '/zipcode', icon: DocumentMagnifyingGlassIcon },
