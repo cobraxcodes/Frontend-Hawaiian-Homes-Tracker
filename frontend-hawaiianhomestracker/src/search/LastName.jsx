@@ -80,7 +80,7 @@ export default function LastName(){
 
 
     {/* Loading / Error States */}
-    {isLoading && <p className="text-center">Currently Loading Applications ...</p>}
+    {isLoading && <p className="text-center">Finding Applications with last name: {input}</p>}
     {isError && (
       <p className="text-red-600 text-center">
         {error.response?.status === 404
@@ -101,12 +101,11 @@ export default function LastName(){
               <span className="font-semibold">Application Date:</span>{" "}
               {new Date(app.applicationDate).toLocaleDateString()}
             </p>
+            <p className="text-gray-700"><span className="font-semibold">Area Code:</span> {app.areaCode}</p>
             <p className="text-gray-700">
               <span className="font-semibold">Rank:</span> {app.rank}
             </p>
-            <p className="text-gray-700">
-              <span className="font-semibold">Zipcode:</span> {app.zipCode}
-            </p>
+            <p className="text-gray-700"><span className="font-semibold">Zipcode:</span> {app.zipcode}</p>
           </div>
         ))}
     </div>
