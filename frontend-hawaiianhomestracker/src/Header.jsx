@@ -83,7 +83,7 @@ export default function Header() {
             </PopoverPanel>
           </Popover>
 
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="https://dhhl.hawaii.gov/applications/applying-for-hawaiian-home-lands/" className="text-sm/6 font-semibold text-gray-900">
             Apply 
           </a>
           <a href="#resources" className="text-sm/6 font-semibold text-gray-900">
