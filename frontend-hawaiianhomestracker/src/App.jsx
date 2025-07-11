@@ -1,5 +1,6 @@
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
-import { lazy, Suspense } from 'react'
+import { useState, lazy, Suspense } from 'react'
+import { Context } from './Context'
 import Header from './landing/Header'
 import Footer from './landing/Footer'
 import Resources from './landing/Resources'
@@ -15,9 +16,11 @@ const Areacode = lazy(() => import('./search/AreaCode'))
 
 
 function App(){
+  const [login, setLogin] = useState(false)
    return(
+    <Context.Provider value={{login,setLogin}}>
     <BrowserRouter>
-     <Header/>
+     {/* <Header/> */}
 
     
     <Routes>
@@ -32,9 +35,9 @@ function App(){
 
 
 
-    <Footer/>
+    {/* <Footer/> */}
     </BrowserRouter>
-    
+    </Context.Provider>
    )
 }
 
