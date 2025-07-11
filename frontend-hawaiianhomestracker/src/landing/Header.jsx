@@ -89,7 +89,7 @@ export default function Header() {
           <a href="/resources" className="text-sm/6 font-semibold text-gray-900">
             Resources
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/profile" className="text-sm/6 font-semibold text-gray-900">
             Profile
           </a>
         </PopoverGroup>
@@ -150,7 +150,7 @@ export default function Header() {
                   Resources
                 </a>
                 <a
-                  href="#"
+                  href="/profile"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Profile

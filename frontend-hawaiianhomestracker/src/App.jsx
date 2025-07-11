@@ -1,10 +1,12 @@
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import { useState, lazy, Suspense } from 'react'
 import { Context } from './Context'
+import Protect from './jwt-auth/Protect'
 import Resources from './landing/Resources'
 import Home from './Home'
 import Signup from './jwt-auth/Signup'
 import Login from './jwt-auth/Login'
+import Profile from './jwt-auth/Profile'
 
 
 //lazy load applications
@@ -34,6 +36,7 @@ function App(){
       <Route path='/areacode' element={<Suspense fallback={<p>Loading Applications</p>}><Areacode/></Suspense>}/>
       <Route path='/signup' element={<Signup />}/>
       <Route path='/login' element={<Login />}/>
+      <Route path='/profile' element={<Protect><Profile /></Protect>}/>
     </Routes>
 
 
