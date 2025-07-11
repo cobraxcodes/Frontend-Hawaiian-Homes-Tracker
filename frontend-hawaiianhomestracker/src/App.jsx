@@ -4,6 +4,7 @@ import { Context } from './Context'
 import Resources from './landing/Resources'
 import Home from './Home'
 import Signup from './jwt-auth/Signup'
+import Login from './jwt-auth/Login'
 
 
 //lazy load applications
@@ -32,6 +33,7 @@ function App(){
       <Route path='/zipcode' element={<Suspense fallback={<p>Loading Applications</p>}><Zipcode/></Suspense>}/>
       <Route path='/areacode' element={<Suspense fallback={<p>Loading Applications</p>}><Areacode/></Suspense>}/>
       <Route path='/signup' element={<Signup />}/>
+      <Route path='/login' element={<Login />}/>
     </Routes>
 
 
