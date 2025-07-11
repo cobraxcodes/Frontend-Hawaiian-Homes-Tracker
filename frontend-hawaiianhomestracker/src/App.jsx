@@ -1,10 +1,9 @@
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import { useState, lazy, Suspense } from 'react'
 import { Context } from './Context'
-import Header from './landing/Header'
-import Footer from './landing/Footer'
 import Resources from './landing/Resources'
 import Home from './Home'
+import Signup from './jwt-auth/Signup'
 
 
 //lazy load applications
@@ -17,11 +16,12 @@ const Areacode = lazy(() => import('./search/AreaCode'))
 
 function App(){
   const [login, setLogin] = useState(false)
+  const [username,setUsername]=useState("")
+  const [password, setPassword]=useState("")
    return(
-    <Context.Provider value={{login,setLogin}}>
+    <Context.Provider value={{login,setLogin,username,setUsername,password,setPassword}}>
     <BrowserRouter>
-     {/* <Header/> */}
-
+ 
     
     <Routes>
       <Route path='/' element={<Home/>}/>
@@ -31,11 +31,10 @@ function App(){
       <Route path='/ranks' element={<Suspense fallback={<p>Loading Applications</p>}><Rank/></Suspense>}/>
       <Route path='/zipcode' element={<Suspense fallback={<p>Loading Applications</p>}><Zipcode/></Suspense>}/>
       <Route path='/areacode' element={<Suspense fallback={<p>Loading Applications</p>}><Areacode/></Suspense>}/>
+      <Route path='/signup' element={<Signup />}/>
     </Routes>
 
 
-
-    {/* <Footer/> */}
     </BrowserRouter>
     </Context.Provider>
    )
