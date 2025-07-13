@@ -102,7 +102,7 @@ export default function Header() {
           <a href="https://dhhl.hawaii.gov/applications/applying-for-hawaiian-home-lands/"  target= "_blank" className="text-sm/6 font-semibold text-gray-900">
             Apply 
           </a>
-          <a href="/resources" className="text-sm/6 font-semibold text-gray-900">
+          <a href="#resources" className="text-sm/6 font-semibold text-gray-900">
             Resources
           </a>
           <a href="/profile" className="text-sm/6 font-semibold text-gray-900">
@@ -115,7 +115,7 @@ export default function Header() {
             Log in <span aria-hidden="true">&rarr;</span>
           </a>
           ):(
-             <a href='#' onClick={handleLogout} className="text-sm/6 font-semibold text-gray-900">
+             <a href='/home' onClick={handleLogout} className="text-sm/6 font-semibold text-gray-900">
             Log out <span aria-hidden="true">&rarr;</span>
           </a>
           )}
@@ -188,7 +188,7 @@ export default function Header() {
                 </a>):(
                   <a
                   onClick={handleLogout}
-                  navigate="/"
+                  navigate="/home"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Log out

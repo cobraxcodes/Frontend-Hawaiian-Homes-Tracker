@@ -27,7 +27,7 @@ export default function Login(){
             localStorage.setItem('username', username)
             navigate('/profile')
         }catch(error){
-        setLoginErr(error.message)
+        setLoginErr('Invalid credentials')
     }
 }
     return(
@@ -99,7 +99,7 @@ export default function Login(){
             </a>
           </p>
           <br/>
-          {loginErr && <p className="text-cetner text-red-500">{loginErr}</p>}
+          {loginErr && <p className="text-center text-red-500">{loginErr}</p>}
         </div>
         
       </div>
