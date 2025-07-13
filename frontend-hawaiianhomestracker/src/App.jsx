@@ -27,8 +27,14 @@ function App(){
   const [login, setLogin] = useState(false)
   const [username,setUsername]=useState("")
   const [password, setPassword]=useState("")
+  const [fullname, setFullname]=useState("")
+  const [date, setDate]=useState("")
+  const [area, setArea]=useState("")
+  const [rank,setRank]=useState("")
+  const [zipcode,setZipcode]=useState("")
+
    return(
-    <Context.Provider value={{login,setLogin,username,setUsername,password,setPassword}}>
+    <Context.Provider value={{login,setLogin,username,setUsername,password,setPassword, fullname, setFullname, date, setDate, rank, setRank, area, setArea, zipcode, setZipcode}}>
     <BrowserRouter>
     <Header/>
     
@@ -47,8 +53,8 @@ function App(){
      {/* // JWT ROUTES */}
       <Route path='/signup' element={<Signup />}/>
       <Route path='/login' element={<Login />}/>
-      {/* <Route path='/profile' element={<Protect><Profile /></Protect>}/> */}
-      <Route path='/profile' element={<Profile />}/>
+      <Route path='/profile' element={<Protect><Profile /></Protect>}/>
+      {/* <Route path='/profile' element={<Profile />}/> */}
       
 
       {/* CRUD ROUTES */}

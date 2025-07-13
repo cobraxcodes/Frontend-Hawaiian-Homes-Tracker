@@ -10,7 +10,7 @@ export default function Zipcode(){
 
     
     // query here
-    const fetchData = async(input, page) =>{
+    const fetchData = async(page) =>{
         if(!zipcode){
             const res = await axios.get(`https://hawaiian-homes-tracker.onrender.com/applications?page=${page}&limit=20`)
             return res.data.applications
