@@ -7,6 +7,8 @@ import Home from './Home'
 import Signup from './jwt-auth/Signup'
 import Login from './jwt-auth/Login'
 import Profile from './jwt-auth/Profile'
+import Header from './landing/Header'
+import Footer from './landing/Footer'
 
 
 //lazy load applications
@@ -24,9 +26,10 @@ function App(){
    return(
     <Context.Provider value={{login,setLogin,username,setUsername,password,setPassword}}>
     <BrowserRouter>
- 
+    <Header/>
     
     <Routes>
+     
       <Route path='/' element={<Home/>}/>
       <Route path='/resources' element={<Resources/>}/>
       <Route path='/lastName' element={<Suspense fallback={<p>Loading ...</p>}><LastName/></Suspense>}/>
@@ -36,10 +39,11 @@ function App(){
       <Route path='/areacode' element={<Suspense fallback={<p>Loading Applications</p>}><Areacode/></Suspense>}/>
       <Route path='/signup' element={<Signup />}/>
       <Route path='/login' element={<Login />}/>
-      <Route path='/profile' element={<Protect><Profile /></Protect>}/>
+      {/* <Route path='/profile' element={<Protect><Profile /></Protect>}/> */}
+      <Route path='/profile' element={<Profile/>}/>
     </Routes>
 
-
+    <Footer/>
     </BrowserRouter>
     </Context.Provider>
    )
