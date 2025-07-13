@@ -2,13 +2,16 @@ import Create from '../assets/Create.png'
 import Update from '../assets/Update.png'
 import Read from '../assets/Read.png'
 import Delete from '../assets/Delete.png'
+import { useContext } from 'react'
+import { Context } from '../Context'
 
 export default function Profile(){
+  const {username} = useContext(Context)
     return(
         <>
            <div className="max-w-md p-6 mt-6 mx-auto"> 
             <h1 className="text-center font-bold text-4xl">Welcome</h1>
-            <p className="text-center">#username here</p>
+            <p className="text-center">{username}</p>
             </div>
              
              {/*  CARDS */}
