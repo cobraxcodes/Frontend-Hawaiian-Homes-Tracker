@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { useState, lazy, Suspense } from 'react'
 import { Context } from './Context'
 import Protect from './jwt-auth/Protect'
@@ -9,6 +9,10 @@ import Login from './jwt-auth/Login'
 import Profile from './jwt-auth/Profile'
 import Header from './landing/Header'
 import Footer from './landing/Footer'
+import CreateApp from './crud/CreateApp'
+import DeleteApp from './crud/DeleteApp'
+import ReadApp from './crud/ReadApp'
+import UpdateApp from './crud/UpdateApp'
 
 
 //lazy load applications
@@ -32,15 +36,26 @@ function App(){
      
       <Route path='/' element={<Home/>}/>
       <Route path='/resources' element={<Resources/>}/>
+     
+     {/* // SEARCH ROUTES */}
       <Route path='/lastName' element={<Suspense fallback={<p>Loading ...</p>}><LastName/></Suspense>}/>
       <Route path='/all' element={<Suspense fallback={<p>Loading...</p>}><AllApplications/></Suspense>}/>
       <Route path='/ranks' element={<Suspense fallback={<p>Loading Applications</p>}><Rank/></Suspense>}/>
       <Route path='/zipcode' element={<Suspense fallback={<p>Loading Applications</p>}><Zipcode/></Suspense>}/>
       <Route path='/areacode' element={<Suspense fallback={<p>Loading Applications</p>}><Areacode/></Suspense>}/>
+     
+     {/* // JWT ROUTES */}
       <Route path='/signup' element={<Signup />}/>
       <Route path='/login' element={<Login />}/>
-      <Route path='/profile' element={<Protect><Profile /></Protect>}/>
+      {/* <Route path='/profile' element={<Protect><Profile /></Protect>}/> */}
+      <Route path='/profile' element={<Profile />}/>
       
+
+      {/* CRUD ROUTES */}
+      <Route path='/create' element={<CreateApp/>}/>
+      <Route path='/update' element={<UpdateApp/>}/>
+      <Route path='/delete' element={<DeleteApp/>}/>
+      <Route path='/read' element={<ReadApp/>}/>
     </Routes>
 
     <Footer/>

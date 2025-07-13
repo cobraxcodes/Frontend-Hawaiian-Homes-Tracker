@@ -4,6 +4,8 @@ import Read from '../assets/Read.png'
 import Delete from '../assets/Delete.png'
 import { useContext } from 'react'
 import { Context } from '../Context'
+import CreateApp from '../crud/CreateApp'
+
 
 export default function Profile(){
   const {username} = useContext(Context)
@@ -23,14 +25,16 @@ export default function Profile(){
             
             {/* CREATE APP */}
             <div className="group relative">
+              <a href='/create'>
               <img
                 src= {Create}
                 className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80"
               />
+              </a>
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700 font-bold">
-                    <a href="" target='_blank'>
+                    <a href='/create'>
                       <span aria-hidden="true" className="absolute inset-0" />
                       CREATE AN APPLICATION
                     </a>
@@ -43,14 +47,16 @@ export default function Profile(){
           
           {/* UPDATE APP */}
                <div className="group relative">
+                <a href='/update'>
               <img
                 src={Update}
                 className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80"
               />
+              </a>
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700 font-bold">
-                    <a href="" target='_blank'>
+                    <a href="/update">
                       <span aria-hidden="true" className="absolute inset-0" />
                       UPDATE AN APPLICATION
                     </a>
@@ -62,14 +68,16 @@ export default function Profile(){
 
             {/* DELETE APPLICATIONS */}
                  <div className="group relative">
+                  <a href='/delete'>
               <img
                 src={Delete}
                 className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80"
               />
+              </a>
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700 font-bold">
-                    <a href="" target='_blank'>
+                    <a href="/delete">
                       <span aria-hidden="true" className="absolute inset-0" />
                       DELETE AN APPLICATION
                     </a>
@@ -81,16 +89,19 @@ export default function Profile(){
 
             {/*  READ APPLICATIONS MADE */}
                  <div className="group relative">
+                  <a href='/read'>
               <img
+              href= '/create'
                 src={Read}
                 className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80"
               />
+              </a>
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700 font-bold">
-                    <a href="" target='_blank'>
+                    <a href="/read" target='_blank'>
                       <span aria-hidden="true" className="absolute inset-0" />
-                      READ ALL APPLICATIONS
+                      VIEW ALL APPLICATIONS
                     </a>
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">placeholder text</p>
