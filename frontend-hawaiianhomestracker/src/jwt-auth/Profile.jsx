@@ -1,32 +1,18 @@
-import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import { Context } from "../Context";
 import Create from '../assets/Create.png'
 import Update from '../assets/Update.png'
 import Read from '../assets/Read.png'
 import Delete from '../assets/Delete.png'
 
 export default function Profile(){
-    const {setUsername,setPassword,setLogin}=useContext(Context)
-    const navigate = useNavigate()
-
-        function handleLogout(){
-        localStorage.removeItem('token')
-        localStorage.removeItem('username')
-        setLogin(false)
-        setUsername("")
-        setPassword("")
-        navigate('/')
-    }
     return(
         <>
-           <div className=" border border-gray-500 max-w-md p-6 mt-6 mx-auto"> 
-            <h1 className="text-center font-bold text-xl">Welcome</h1>
+           <div className="max-w-md p-6 mt-6 mx-auto"> 
+            <h1 className="text-center font-bold text-4xl">Welcome</h1>
             <p className="text-center">#username here</p>
             </div>
              
              {/*  CARDS */}
-             <div className="bg-white" id='resources'>
+             <div className="bg-white" >
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="text-4xl font-bold tracking-tight text-gray-900">Actions</h2>
 
@@ -113,16 +99,6 @@ export default function Profile(){
         </div>
       </div>
     </div>
-
-          
-        
-          
-           
-
-
-
-
-        <button onClick={handleLogout} className="text-red-500 text-center">Logout</button>
         </>
      
     )

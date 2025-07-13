@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import {
   Dialog,
   DialogPanel,
@@ -20,6 +20,9 @@ import {
   MapPinIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon,  } from '@heroicons/react/20/solid'
+import { Context } from '../Context'
+import { useNavigate } from 'react-router-dom'
+
 
 const products = [
   { name: 'Area Code', description: 'Enter desired area code to see rank by area', href: '/areacode', icon: MapPinIcon },
@@ -29,7 +32,20 @@ const products = [
 ]
 
 export default function Header() {
+  const {login}=useContext(Context)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+   const {setUsername,setPassword,setLogin}=useContext(Context)
+    const navigate = useNavigate()
+
+        function handleLogout(){
+        localStorage.removeItem('token')
+        localStorage.removeItem('username')
+        setLogin(false)
+        setUsername("")
+        setPassword("")
+        navigate('/')
+    }
+
 
   return (
     <header className="bg-white">
@@ -86,7 +102,7 @@ export default function Header() {
           <a href="https://dhhl.hawaii.gov/applications/applying-for-hawaiian-home-lands/"  target= "_blank" className="text-sm/6 font-semibold text-gray-900">
             Apply 
           </a>
-          <a href="#resources" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/resources" className="text-sm/6 font-semibold text-gray-900">
             Resources
           </a>
           <a href="/profile" className="text-sm/6 font-semibold text-gray-900">
@@ -94,9 +110,15 @@ export default function Header() {
           </a>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          {!login? (
           <a href="/login" className="text-sm/6 font-semibold text-gray-900">
             Log in <span aria-hidden="true">&rarr;</span>
           </a>
+          ):(
+             <a href='#' onClick={handleLogout} className="text-sm/6 font-semibold text-gray-900">
+            Log out <span aria-hidden="true">&rarr;</span>
+          </a>
+          )}
         </div>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -157,12 +179,22 @@ export default function Header() {
                 </a>
               </div>
               <div className="py-6">
-                <a
+                {!login?(<a
+                  id='#loginBtn'
                   href="/login"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Log in
+                </a>):(
+                  <a
+                  onClick={handleLogout}
+                  navigate="/"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                >
+                  Log out
                 </a>
+                )}
+                
               </div>
             </div>
           </div>

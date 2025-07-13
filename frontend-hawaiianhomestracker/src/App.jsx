@@ -39,8 +39,8 @@ function App(){
       <Route path='/areacode' element={<Suspense fallback={<p>Loading Applications</p>}><Areacode/></Suspense>}/>
       <Route path='/signup' element={<Signup />}/>
       <Route path='/login' element={<Login />}/>
-      {/* <Route path='/profile' element={<Protect><Profile /></Protect>}/> */}
-      <Route path='/profile' element={<Profile/>}/>
+      <Route path='/profile' element={<Protect><Profile /></Protect>}/>
+      
     </Routes>
 
     <Footer/>
