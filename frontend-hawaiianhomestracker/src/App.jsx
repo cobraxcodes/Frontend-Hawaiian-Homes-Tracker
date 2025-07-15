@@ -16,6 +16,8 @@ import UpdateApp from './crud/UpdateApp'
 import Contribute from './contact/Contribute'
 import Contact from './contact/Contact'
 import About from './contact/About'
+import StateHelp from './resources/StateHelp'
+import Information from './resources/Information'
 
 
 //lazy load applications
@@ -72,6 +74,8 @@ function App(){
     <Route path='/contribute' element={<Contribute />}/>
     <Route path='/contact' element={<Contact />}/>
     <Route path='/about' element={<About />}/>
+    <Route path='/help' element={<StateHelp />}/>
+    <Route path='/information' element={<Information/>}/>
 
     </Routes>
 

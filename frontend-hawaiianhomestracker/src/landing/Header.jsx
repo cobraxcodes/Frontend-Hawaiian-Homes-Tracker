@@ -102,7 +102,7 @@ export default function Header() {
           <a href="https://dhhl.hawaii.gov/applications/applying-for-hawaiian-home-lands/"  target= "_blank" className="text-sm/6 font-semibold text-gray-900">
             Apply 
           </a>
-          <Link to="#resources" className="text-sm/6 font-semibold text-gray-900">
+          <Link to="/resources" className="text-sm/6 font-semibold text-gray-900">
             Resources
           </Link>
           <Link to="/profile" className="text-sm/6 font-semibold text-gray-900">

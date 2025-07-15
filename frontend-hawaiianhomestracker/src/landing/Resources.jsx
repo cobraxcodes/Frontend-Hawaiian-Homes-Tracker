@@ -2,6 +2,7 @@ import cardOne from '../assets/cardOne.jpg'
 import cardTwo from '../assets/cardTwo.jpeg'
 import cardThree from '../assets/cardThree.jpg'
 import cardFour from '../assets/cardFour.jpg'
+import { Link } from 'react-router-dom'
 
 
 const resources = [
@@ -15,14 +16,14 @@ const resources = [
   {
     id:1,
     name: 'Be Informed',
-    href: '#',
+    href: '/information',
     imageSrc: cardTwo,
     description: "List of tenant's rights or available grants, loans, or financial aid programs for homesteaders"
   },
 {
     id:2,
     name: 'Emergency Rental and Utilities',
-    href: '#',
+    href: '/help',
     imageSrc: cardThree,
     description: 'State provided assistance '
 },
@@ -53,10 +54,10 @@ export default function Resources() {
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">
-                    <a href={resources.href} target='_blank'>
+                    <Link to={resources.href} target='_blank'>
                       <span aria-hidden="true" className="absolute inset-0" />
                       {resources.name}
-                    </a>
+                    </Link>
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">{resources.description}</p>
                 </div>
