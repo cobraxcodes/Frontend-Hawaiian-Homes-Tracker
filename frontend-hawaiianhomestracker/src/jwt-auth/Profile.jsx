@@ -4,7 +4,7 @@ import Read from '../assets/Read.png'
 import Delete from '../assets/Delete.png'
 import { useContext } from 'react'
 import { Context } from '../Context'
-import CreateApp from '../crud/CreateApp'
+
 
 
 export default function Profile(){
@@ -99,7 +99,7 @@ export default function Profile(){
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700 font-bold">
-                    <a href="/read" target='_blank'>
+                    <a href="/read">
                       <span aria-hidden="true" className="absolute inset-0" />
                       VIEW ALL APPLICATIONS
                     </a>

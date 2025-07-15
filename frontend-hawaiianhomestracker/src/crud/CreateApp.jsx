@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react'
 import { Context } from '../Context'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { toast, ToastContainer} from 'react-toastify'
 
 
 
@@ -11,7 +12,6 @@ export default function CreateApp(){
     const [firstname, setFirstname]=useState("")
     const [lastname, setLastname]=useState("")
     const [error,setError]=useState("")
-    const [success, setSuccess]=useState("")
     const navigate = useNavigate()
 
     const handleCreate = async(e) =>{
@@ -56,7 +56,7 @@ export default function CreateApp(){
             
            
             
-             setSuccess('Application created successfully')
+             toast.success('Application created successfully')
              setError('')
               setTimeout(() =>{
             navigate('/read')
@@ -127,10 +127,10 @@ We are committed to protecting your privacy and will never sell, share, or misus
         </div>
 
         <div className='text-center font-bold'>
-        {success? <p>{success}</p>:<p className='text-red-600'>{error}</p>}
+        {error && <p className='text-red-600'>{error}</p>}
         </div>
 
-     
+       <ToastContainer />
         </>
     )
 }
