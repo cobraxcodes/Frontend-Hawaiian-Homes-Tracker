@@ -2,6 +2,7 @@ import Create from '../assets/Create.png'
 import Update from '../assets/Update.png'
 import Read from '../assets/Read.png'
 import Delete from '../assets/Delete.png'
+import {Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { Context } from '../Context'
 
@@ -34,10 +35,10 @@ export default function Profile(){
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700 font-bold">
-                    <a href='/create'>
+                    <Link to='/create'>
                       <span aria-hidden="true" className="absolute inset-0" />
                       CREATE AN APPLICATION
-                    </a>
+                   </Link>
                   </h3>
                     <p className="mt-1 text-sm text-gray-500">placeholder text</p>
                 </div>
@@ -56,10 +57,10 @@ export default function Profile(){
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700 font-bold">
-                    <a href="/update">
+                    <Link to="/update">
                       <span aria-hidden="true" className="absolute inset-0" />
                       UPDATE AN APPLICATION
-                    </a>
+                    </Link>
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">placeholder text</p>
                 </div>
@@ -77,10 +78,10 @@ export default function Profile(){
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700 font-bold">
-                    <a href="/delete">
+                    <Link to="/delete">
                       <span aria-hidden="true" className="absolute inset-0" />
                       DELETE AN APPLICATION
-                    </a>
+                    </Link>
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">placeholder text</p>
                 </div>
@@ -99,10 +100,10 @@ export default function Profile(){
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700 font-bold">
-                    <a href="/read">
+                    <Link to="/read">
                       <span aria-hidden="true" className="absolute inset-0" />
                       VIEW ALL APPLICATIONS
-                    </a>
+                    </Link>
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">placeholder text</p>
                 </div>

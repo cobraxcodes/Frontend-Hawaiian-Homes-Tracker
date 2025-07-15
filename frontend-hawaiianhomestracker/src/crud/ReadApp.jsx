@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 
 export default function ReadApp(){
@@ -41,6 +42,7 @@ export default function ReadApp(){
           : "Something went wrong. Please try again later."}
       </p>
     )}
+    {data?.length === 0 && <p className="text-center text-xl ">Please <span><Link to='/create'className="underline font-bold">create</Link></span> an application to get started</p>}
 
 
     {/* Applications Grid */}

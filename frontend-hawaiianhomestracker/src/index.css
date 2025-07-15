@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 6px;
+  opacity: 0.3;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000; /* Indigo-600 from Tailwind */
+  border-radius: 6px;
+  border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #06831f; /* Indigo-700 */
+}

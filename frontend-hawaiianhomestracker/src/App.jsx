@@ -53,8 +53,8 @@ function App(){
      {/* // JWT ROUTES */}
       <Route path='/signup' element={<Signup />}/>
       <Route path='/login' element={<Login />}/>
-      {/* <Route path='/profile' element={<Protect><Profile /></Protect>}/> */}
-      <Route path='/profile' element={<Profile />}/>
+      <Route path='/profile' element={<Protect><Profile /></Protect>}/>
+      {/* <Route path='/profile' element={<Profile />}/> */}
       
 
       {/* CRUD ROUTES */}

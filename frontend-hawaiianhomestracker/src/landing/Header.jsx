@@ -21,7 +21,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon,  } from '@heroicons/react/20/solid'
 import { Context } from '../Context'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 
 const products = [
@@ -52,9 +52,9 @@ export default function Header() {
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
             <span className="sr-only">Hawaiian Homes Tracker</span>
-             <a href="/" className="text-sm/6 font-semibold text-gray-900">
+             <Link to="/" className="text-sm/6 font-semibold text-gray-900">
             Hawaiian Homes Tracker
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -87,10 +87,10 @@ export default function Header() {
                       <item.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-indigo-600" />
                     </div>
                     <div className="flex-auto">
-                      <a href={item.href} className="block font-semibold text-gray-900">
+                      <Link to={item.href} className="block font-semibold text-gray-900">
                         {item.name}
                         <span className="absolute inset-0" />
-                      </a>
+                      </Link>
                       <p className="mt-1 text-gray-600">{item.description}</p>
                     </div>
                   </div>
@@ -102,12 +102,12 @@ export default function Header() {
           <a href="https://dhhl.hawaii.gov/applications/applying-for-hawaiian-home-lands/"  target= "_blank" className="text-sm/6 font-semibold text-gray-900">
             Apply 
           </a>
-          <a href="#resources" className="text-sm/6 font-semibold text-gray-900">
+          <Link to="#resources" className="text-sm/6 font-semibold text-gray-900">
             Resources
-          </a>
-          <a href="/profile" className="text-sm/6 font-semibold text-gray-900">
+          </Link>
+          <Link to="/profile" className="text-sm/6 font-semibold text-gray-900">
             Profile
-          </a>
+          </Link>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           {!login? (
@@ -125,9 +125,9 @@ export default function Header() {
         <div className="fixed inset-0 z-50" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="/" className="-m-1.5 p-1.5">
+            <Link to="/" className="-m-1.5 p-1.5">
              <span className="font-bold"> Hawaiian Homes Tracker</span>
-            </a>
+            </Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
@@ -165,18 +165,18 @@ export default function Header() {
                 >
                   Apply
                 </a>
-                <a
-                  href="/resources"
+                <Link 
+                  to="/resources"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Resources
-                </a>
-                <a
-                  href="/profile"
+                </Link>
+                <Link
+                  to="/profile"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Profile
-                </a>
+                </Link>
               </div>
               <div className="py-6">
                 {!login?(<a

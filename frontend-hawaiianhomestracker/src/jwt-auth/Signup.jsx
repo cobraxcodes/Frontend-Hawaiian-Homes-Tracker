@@ -2,11 +2,11 @@ import { useContext, useState } from "react";
 import { Context } from "../Context";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
+import { ToastContainer, toast } from "react-toastify";
 
 
 export default function Signup(){
     const{username,setUsername,password,setPassword}=useContext(Context)
-    const [successMsg, setSuccessMsg]=useState('')
     const[signupErr, setSignupErr]=useState("")
     const navigate = useNavigate()
    
@@ -30,7 +30,7 @@ export default function Signup(){
                     'Content-type': 'application/json'
                 }
             })
-            setSuccessMsg('User successfully created! Redirecting you to the login page ... ')
+            toast.success('User successfully created! Redirecting you to the login page ... ')
             setTimeout(() =>{
                 navigate('/login')
             }, 4000)
@@ -103,9 +103,9 @@ export default function Signup(){
           </p>
           <br/>
           {signupErr && <p className="text-center text-red-500" >{signupErr}</p>}
-          {successMsg && <p className="text-center text-green-500">{successMsg}</p>}
-        </div>
         
+        </div>
+        <ToastContainer/>
       </div>
     )
 }

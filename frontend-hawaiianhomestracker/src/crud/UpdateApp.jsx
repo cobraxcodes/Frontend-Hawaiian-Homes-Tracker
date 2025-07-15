@@ -3,6 +3,7 @@ import axios from "axios"
 import { ToastContainer, toast } from "react-toastify"
 import UpdateModal from "../updateModal"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 
 export default function UpdateApp(){
@@ -87,6 +88,7 @@ export default function UpdateApp(){
           : "Something went wrong. Please try again later."}
       </p>
     )}
+    {data?.length === 0 && <p className="text-center text-xl ">Please <span><Link to='/create'className="underline font-bold">create</Link></span> an application to get started</p>}
 
 
     {/* Applications Grid */}

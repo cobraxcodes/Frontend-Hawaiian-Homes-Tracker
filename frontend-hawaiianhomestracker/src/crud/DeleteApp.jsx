@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { useQuery } from "@tanstack/react-query";
  
 
@@ -75,6 +75,7 @@ export default function DeleteApp(){
           : "Something went wrong. Please try again later."}
       </p>
     )}
+    {data?.length === 0 && <p className="text-center text-xl ">Please <span><Link to='/create'className="underline font-bold">create</Link></span> an application to get started</p>}
 
 
     {/* Applications Grid */}
