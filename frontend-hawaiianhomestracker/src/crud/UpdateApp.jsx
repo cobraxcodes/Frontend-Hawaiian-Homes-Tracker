@@ -1,8 +1,14 @@
-import { useQuery } from "@tanstack/react-query"
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
 import axios from "axios"
+import { ToastContainer, toast } from "react-toastify"
+import UpdateModal from "../updateModal"
+import { useState } from "react"
+
 
 export default function UpdateApp(){
+    const [selectedApp, setSelectedApp] = useState(null)
    const token = localStorage.getItem('token')
+   const queryClient = useQueryClient()
 
     const fetchData = async() =>{
         const URL = "https://hawaiian-homes-tracker.onrender.com/applications/user/posts"
@@ -20,10 +26,51 @@ export default function UpdateApp(){
         queryFn: fetchData
     })
 
-    
+        // using useMutation here
+        const updateApplication = async ({id, updatedData}) =>{
+           const URL = `https://hawaiian-homes-tracker.onrender.com/applications/user/posts/${id}`
+           await axios.patch(URL, updatedData, {
+            headers:{
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            }
+           })
+        }
+
+        const mutation = useMutation({
+            mutationFn: updateApplication,
+            onSuccess: () =>{
+                toast.success('Application updated successfully!')
+                queryClient.invalidateQueries(['applicationsByUser'])
+            },
+            onError: () =>{
+                toast.error('Failed to update application')
+            }
+        })
+
+        const handleUpdate = (app) =>{
+           setSelectedApp(app)
+        }
+
+        const handleSave = (updatedData) =>{
+              mutation.mutate({
+                id: selectedApp.userCreatedApplicationId,
+                updatedData
+           
+            })
+            setSelectedApp(null)
+        }
     
     return(
         <>
+
+           <UpdateModal
+                isOpen={!!selectedApp}
+                onClose={() => setSelectedApp(null)}
+                onSave={handleSave}
+                app={selectedApp}
+                />
+
         <div className="mb-8 text-center">
        <h1 className="text-3xl font-bold text-gray-900  mt-24">Update An Application</h1>
        </div>
@@ -60,12 +107,18 @@ export default function UpdateApp(){
             <p className="text-gray-700"><span className="font-semibold">Zipcode:</span> {app.zipcode}</p>
 
             <div className="text-right ">
-                <button className="mt-12 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Update</button>
+                <button 
+                onClick={() => handleUpdate(app)}
+                className="mt-12 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Update</button>
                 </div>
+
+             
           </div>
         ))}
     </div>
       </div>
+      <ToastContainer/>
         </>
     )
 }
+
