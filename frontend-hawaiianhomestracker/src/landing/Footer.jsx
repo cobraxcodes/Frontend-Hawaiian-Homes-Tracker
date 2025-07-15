@@ -9,6 +9,7 @@ export default function Footer() {
         <h2 className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">Hawaiian Homes Tracker</h2>
         <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
           <li>
+            <Link to='/about'>
             <Typography
               as="a"
               href="#"
@@ -17,6 +18,7 @@ export default function Footer() {
             >
               About Us
             </Typography>
+            </Link>
           </li>
          
           <li>
