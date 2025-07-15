@@ -1,4 +1,5 @@
 import { Typography } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
  
 export default function Footer() {
@@ -19,6 +20,7 @@ export default function Footer() {
           </li>
          
           <li>
+            <Link to='/contribute'>
             <Typography
               as="a"
               href="#"
@@ -27,8 +29,10 @@ export default function Footer() {
             >
               Contribute
             </Typography>
+            </Link>
           </li>
           <li>
+            <Link to='/contact'>
             <Typography
               as="a"
               href="#"
@@ -37,6 +41,7 @@ export default function Footer() {
             >
               Contact Us
             </Typography>
+            </Link>
           </li>
         </ul>
       </div>

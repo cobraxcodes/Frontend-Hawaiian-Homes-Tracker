@@ -13,6 +13,8 @@ import CreateApp from './crud/CreateApp'
 import DeleteApp from './crud/DeleteApp'
 import ReadApp from './crud/ReadApp'
 import UpdateApp from './crud/UpdateApp'
+import Contribute from './contact/Contribute'
+import Contact from './contact/Contact'
 
 
 //lazy load applications
@@ -62,6 +64,13 @@ function App(){
       <Route path='/update' element={<UpdateApp/>}/>
       <Route path='/delete' element={<DeleteApp/>}/>
       <Route path='/read' element={<ReadApp/>}/>
+
+
+
+    {/* EXTRAS */}
+    <Route path='/contribute' element={<Contribute />}/>
+    <Route path='/contact' element={<Contact />}/>
+
     </Routes>
 
     <Footer/>
