@@ -30,7 +30,7 @@ const resources = [
 {
    id:3,
     name: 'Website Updates',
-    href: '#',
+    href: '/updates',
     imageSrc: cardFour,
     description: 'Click here to stay updated on any upcoming updates to the website or applications.'
 }

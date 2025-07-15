@@ -18,6 +18,7 @@ import Contact from './contact/Contact'
 import About from './contact/About'
 import StateHelp from './resources/StateHelp'
 import Information from './resources/Information'
+import Updates from './resources/Updates'
 
 
 //lazy load applications
@@ -76,6 +77,7 @@ function App(){
     <Route path='/about' element={<About />}/>
     <Route path='/help' element={<StateHelp />}/>
     <Route path='/information' element={<Information/>}/>
+    <Route path='/updates' element={<Updates />} />
 
     </Routes>
 
