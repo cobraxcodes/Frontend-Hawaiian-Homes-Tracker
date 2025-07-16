@@ -17,16 +17,23 @@ React, Tailwind, Vite, react-router-dom, HTML, CSS, Javascript, lazy-loading, Vi
 
 ## FEATURES
 - **Search**
-Enables users to search via last name, ranking, and application dates
+Enables users to search via last name, ranking, area code and application dates
 - **Lazy Loading**
-placeholder
+Lazy loads search pages for website optimization and prevent stale data
 - **CRUD:**
-placeholder
+Securely allows user to create, update, delete, and view all applications created
 - **LOGIN, SIGNUP, SIGNOUT**
-placeholder
+Using JWT users have the option to signup and perform crud operations upon login from their own dedicated profiles
 - **RESOURCES**
-placeholder
+Information for homesteaders, legal assistance, loans and more are providded in resources 
 - **Cultural Enrichment**
-placeholder
+A history of hawaiian homelands is rendered in the home page, along with several native hawaiian grants and health aides available
 - **Responsive Design**
-placeholder
+Responsive design all through, compatible with most modern cellular devices and computers
+- **CONTACT**
+Using formsubmit, users are able to send a direct email from the website for any assistance needed from submitting apps to suggesting how to improve the website
+
+
+## TESTING
+A full checklist of what's covered by vitest etsting is documented here
+[Frontend vitest checklist](./frontend-hawaiianhomestracker/docs/frontend-test-plan.md)
