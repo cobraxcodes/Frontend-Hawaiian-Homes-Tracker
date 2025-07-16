@@ -1,4 +1,4 @@
-// ~~~~~~~ LANDING PAGE COMPONENTS ~~~~~~~~ //
+// ~~~~~~~ LANDING PAGE COMPONENTS ~~~~~~~ //
 
 describe('Landing Page', () =>{ // view all applications button works correctly
     it('clicks links successfully', () =>{
