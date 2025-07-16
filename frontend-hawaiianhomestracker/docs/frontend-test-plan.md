@@ -65,12 +65,6 @@ This document outlines all frontend test cases for this application using **Vite
 
 ---
 
-## Contribute Page
-- [ ] GitHub link is visible
-- [ ] Link opens in new tab
-
----
-
 ##  Search
 - [ ] Cards render on search
 - [ ] Buttons work
