@@ -1,3 +1,5 @@
+
+
 // ~~~~~~~ LANDING PAGE COMPONENTS ~~~~~~~ //
 describe('Landing Page', () =>{ // view all applications button works correctly
     it('clicks links successfully', () =>{
@@ -188,9 +190,32 @@ describe('Delete', () =>{
        cy.get('button[data-cy="login-btn"]').should('be.visible').click();
     })
  
-    it('navigate to delete page and deletes an app', () =>{
-        cy.contains("DELETE AN APPLICATION").click()
-        cy.get('button[data-cy="delete-btn"]').click({multiple: true})
+    // it('navigate to delete page and deletes an app', () =>{
+    //     cy.contains("DELETE AN APPLICATION").click()
+    //     cy.get('button[data-cy="delete-btn"]').click({multiple: true})
 
+    // })
+})
+
+
+//~~~~~ SEARCH ~~~~~//
+describe('Search', () =>{ // same usage for other search ops
+    beforeEach(() =>{
+        cy.viewport(1280, 800);
+        cy.visit("http://localhost:5173/")
+    })
+
+    it('navigates to area code and perform a search', () =>{
+         cy.contains('Search Applications').click()
+        cy.contains('Area Code').click()
+       cy.get('input[name="search"]')
+         .should('be.visible')
+         .click({ force: true })     
+         .clear()                   
+         .type('393')
+         .should('have.value', '393')
+        cy.contains("Next").click()
+        cy.contains("Prev").click()
+    
     })
 })

@@ -58,8 +58,9 @@ export default function AreaCode(){
       </label>
       <div className="relative">
         <input
+        name='search'
           type="search"
-          id="zipcode-search"
+          id="area-search"
           className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-100 focus:ring-blue-500 focus:border-blue-500"
           placeholder="Enter areacode..."
           value={areacode}
