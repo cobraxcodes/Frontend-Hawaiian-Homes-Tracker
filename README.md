@@ -36,4 +36,4 @@ Using formsubmit, users are able to send a direct email from the website for any
 
 ## TESTING
 A full checklist of what's covered by cypress testing is documented here
-[Frontend testing checklist](../Frontend-Hawaiian-Homes-Tracker/frontend-hawaiianhomestracker/cypress/e2e/home.cy.js)
+[Frontend testing checklist](./frontend-hawaiianhomestracker/cypress/e2e/home.cy.js)
