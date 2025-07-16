@@ -112,3 +112,85 @@ describe('Profile', () =>{
         
     })
 })
+
+
+
+//~~~~ CRUD OPERATIONS ~~~~~//
+describe('Create', () =>{
+    beforeEach(() =>{
+       cy.visit("http://localhost:5173/profile")
+         cy.get('input[name="username"]').type("devstage2")
+        cy.get('input[name="password"]').type("Admin123")
+       cy.get('button[data-cy="login-btn"]').should('be.visible').click();
+    })
+        //HASHED TO ELIMINATE MULTIPLES 
+    // it('clicks create app and fills out form successfully', () =>{
+    //     cy.contains('CREATE AN APPLICATION').click()
+    //     cy.get('input[name="first-name"]').type("test")
+    //     cy.get('input[name="last-name"]').type("cypress")
+    //     cy.get('input[name="date"]')
+    //     .clear()
+    //     .type("2025-07-15")
+    //     .should('have.value', "2025-07-15");
+    //     cy.get('input[name="rank"]').type("010")
+    //     cy.get('input[name="area-code"]').type("010")
+    //     cy.get('input[name="zipcode"]').type("01010")
+    //     cy.get('button[data-cy="submit-btn"]').click()
+    //     cy.contains('Submitted Applications')
+    // })
+
+    it('navigates to all applications and renders app successfully', () =>{
+        cy.contains('VIEW ALL APPLICATIONS').click()
+        cy.contains('Submitted Applications')
+    })
+
+
+})
+
+describe('Read', () =>{
+    beforeEach(() =>{
+       cy.visit("http://localhost:5173/profile")
+         cy.get('input[name="username"]').type("devstage2")
+        cy.get('input[name="password"]').type("Admin123")
+       cy.get('button[data-cy="login-btn"]').should('be.visible').click();
+    })
+
+       it('navigates to all applications and renders app successfully', () =>{
+        cy.contains('VIEW ALL APPLICATIONS').click()
+        cy.contains('Submitted Applications')
+    })
+})
+
+
+describe('Update', () =>{
+   beforeEach(() =>{
+       cy.visit("http://localhost:5173/profile")
+         cy.get('input[name="username"]').type("devstage2")
+        cy.get('input[name="password"]').type("Admin123")
+       cy.get('button[data-cy="login-btn"]').should('be.visible').click();
+    })
+ 
+    // it('navigates to update an application', () =>{
+    //         cy.contains("UPDATE AN APPLICATION").click()
+    //      cy.get('button[data-cy="update-btn"]').click({multiple: true}, {force: true})
+    //      cy.contains('input[name="fullname"]')
+    //      cy.contains('input[name="date"]')
+    //      cy.get('input[name="areacode"]').type("111")
+    //      cy.contains('input[name="zipcode"]')
+    // })
+})
+
+describe('Delete', () =>{
+       beforeEach(() =>{
+       cy.visit("http://localhost:5173/profile")
+         cy.get('input[name="username"]').type("devstage2")
+        cy.get('input[name="password"]').type("Admin123")
+       cy.get('button[data-cy="login-btn"]').should('be.visible').click();
+    })
+ 
+    it('navigate to delete page and deletes an app', () =>{
+        cy.contains("DELETE AN APPLICATION").click()
+        cy.get('button[data-cy="delete-btn"]').click({multiple: true})
+
+    })
+})

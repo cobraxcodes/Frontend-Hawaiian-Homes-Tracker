@@ -89,39 +89,39 @@ We are committed to protecting your privacy and will never sell, share, or misus
 
                     {/* First Name */}
                  <h3 className='font-bold'>First Name</h3>
-                <input type='text' value={firstname} onChange={(e) => setFirstname(e.target.value)} placeholder="Jane " className='block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6'/>
+                <input name='first-name' type='text' value={firstname} onChange={(e) => setFirstname(e.target.value)} placeholder="Jane " className='block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6'/>
                 
                 {/* Last Name */}
                 <h3 className='font-bold'>Last Name</h3>
-                <input type='text' value={lastname} onChange={(e) => setLastname(e.target.value)} placeholder='Doe' className='block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6'/>
+                <input name='last-name' type='text' value={lastname} onChange={(e) => setLastname(e.target.value)} placeholder='Doe' className='block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6'/>
              
                 {/* Application Date */}
                  <div className='flex flex-col w-64 ml-12'>
                 <h3 className='font-bold '>Application Date</h3>
-                <input type='date' value={date} onChange={(e) => setDate(e.target.value)} placeholder='7-11-1998'className='block w-64 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6'/>
+                <input name="date" type='date' value={date} onChange={(e) => setDate(e.target.value)} placeholder='7-11-1998'className='block w-64 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6'/>
                 </div>
 
                     {/* RANK */}
                   <div className='flex flex-col w-64 ml-12'>
                 <h3 className='font-bold'>Rank </h3>
-                <input type='text' value={rank} onChange={(e) => setRank(e.target.value)} placeholder='213' className='block w-64 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6'/>
+                <input name='rank' type='text' value={rank} onChange={(e) => setRank(e.target.value)} placeholder='213' className='block w-64 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6'/>
                 </div>
 
                     {/* AREA CODE */}
                 <div className='flex flex-col w-64 ml-12'>
                 <h3 className='font-bold'>Area Code</h3>
-                <input type='number' value={area} onChange={(e) => setArea(e.target.value)} placeholder='913' className='block w-64 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6'/>
+                <input name='area-code' type='number' value={area} onChange={(e) => setArea(e.target.value)} placeholder='913' className='block w-64 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6'/>
                </div>
 
                 {/* ZIP CODE */}
                    <div className='flex flex-col w-64 ml-12'>
                 <h3 className='font-bold'>Zipcode</h3>
-                <input type='text' value={zipcode} onChange={(e) => setZipcode(e.target.value)} placeholder='96701' className='block w-64 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6'/>
+                <input name='zipcode' type='text' value={zipcode} onChange={(e) => setZipcode(e.target.value)} placeholder='96701' className='block w-64 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6'/>
                 </div>  
                 </div>
 
                 <div className='flex justify-center'>
-                    <button type='submit' className='flex w-64 mt-12 justify-center rounded-md bg-green-700 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>Submit</button>
+                    <button data-cy="submit-btn" type='submit' className='flex w-64 mt-12 justify-center rounded-md bg-green-700 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>Submit</button>
                 </div>
             </form>
         </div>

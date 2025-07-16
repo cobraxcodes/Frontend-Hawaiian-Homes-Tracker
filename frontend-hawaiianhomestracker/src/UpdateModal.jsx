@@ -27,6 +27,7 @@ export default function UpdateModal({ isOpen, onClose, onSave, app }) {
         {/* <div> */}
             <h3 className="font-bold text-xl">Name</h3>
         <input
+        name="fullname"
           value={name}
           onChange={(e) => setName(e.target.value)}
           className="w-full mb-2 p-2 border rounded"
@@ -38,6 +39,7 @@ export default function UpdateModal({ isOpen, onClose, onSave, app }) {
 
          <h3 className="font-bold text-xl">Application Date</h3>
         <input
+        name="date"
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
@@ -46,6 +48,7 @@ export default function UpdateModal({ isOpen, onClose, onSave, app }) {
 
          <h3 className="font-bold text-xl">Area Code</h3>
         <input
+        name="areacode"
           value={area}
           onChange={(e) => setArea(e.target.value)}
           className="w-full mb-2 p-2 border rounded"
@@ -54,6 +57,7 @@ export default function UpdateModal({ isOpen, onClose, onSave, app }) {
 
          <h3 className="font-bold text-xl">Zipcode</h3>
         <input
+        name="zipcode"
           value={zipcode}
           onChange={(e) => setZipcode(e.target.value)}
           className="w-full mb-2 p-2 border rounded"
