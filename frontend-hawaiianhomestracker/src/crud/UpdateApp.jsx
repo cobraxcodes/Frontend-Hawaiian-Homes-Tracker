@@ -77,7 +77,7 @@ export default function UpdateApp(){
        </div>
  
 
-     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 min-h-[calc(78vh-200px)]">
 
     {/* Loading / Error States */}
     {isLoading && <p className="text-center">Finding Submitted Applications </p>}
@@ -111,7 +111,7 @@ export default function UpdateApp(){
             <div className="text-right ">
                 <button 
                 onClick={() => handleUpdate(app)}
-                className="mt-12 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Update</button>
+                className="mt-12 flex w-full justify-center rounded-md bg-green-500 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-green-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Update</button>
                 </div>
 
              

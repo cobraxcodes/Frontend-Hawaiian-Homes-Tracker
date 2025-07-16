@@ -64,7 +64,7 @@ export default function DeleteApp(){
        </div>
  
 
-     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 min-h-[calc(78vh-200px)]">
 
     {/* Loading / Error States */}
     {isLoading && <p className="text-center">Finding Submitted Applications </p>}
@@ -96,7 +96,7 @@ export default function DeleteApp(){
             <p className="text-gray-700"><span className="font-semibold">Zipcode:</span> {app.zipcode}</p>
 
             <div className="text-right " onClick={() => handleDelete(app.userCreatedApplicationId)}>
-                <button className="mt-12 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Delete</button>
+                <button className="mt-12 flex w-full justify-center rounded-md bg-green-800 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Delete</button>
                 </div>
           </div>
         ))}

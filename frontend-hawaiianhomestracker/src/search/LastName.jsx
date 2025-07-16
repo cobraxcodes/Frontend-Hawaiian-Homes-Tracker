@@ -57,7 +57,7 @@ export default function LastName(){
  
 
     {/* Search Form */}
-     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-8 lg:px-8">
     <form className="max-w-md mx-auto mb-12" onSubmit={handleInput}>
       <label htmlFor="lastname-search" className="mb-2 text-sm font-medium text-gray-900 sr-only">
         Search Last Name
@@ -73,7 +73,7 @@ export default function LastName(){
         />
         <button
           type="submit"
-          className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
+          className="text-white absolute end-2.5 bottom-2.5 bg-green-500 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
         >
           Search
         </button>
@@ -114,8 +114,8 @@ export default function LastName(){
 
 
         {!input && ( <div className="flex items-center gap-24 justify-center border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
-    <button onClick={handlePaginationPrev} disabled={page === 1} className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Prev</button>
-    <button onClick={handlePaginationNext}  className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</button>
+    <button onClick={handlePaginationPrev} disabled={page === 1} className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-green-300">Prev</button>
+    <button onClick={handlePaginationNext}  className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-green-500">Next</button>
   </div>)}
  
 

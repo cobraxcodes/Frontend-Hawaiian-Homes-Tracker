@@ -5,7 +5,7 @@ export default function Updates() {
     {
       id: 1,
       date: "2025-07-15",
-      title: "Welcome to My Website!",
+      title: "Welcome To Hawaiian Homelands Tracker!",
       details:
         "This is the first update. Stay tuned for news, features, and announcements.",
     },

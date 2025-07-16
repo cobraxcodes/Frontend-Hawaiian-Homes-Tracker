@@ -32,7 +32,7 @@ export default function Login(){
 }
     return(
         (
-        <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+        <div className="flex min-h-[calc(90vh-200px)] flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
             Login
@@ -64,7 +64,7 @@ export default function Login(){
                   Password
                 </label>
                 <div className="text-sm">
-                  <a className="font-semibold text-indigo-600 hover:text-indigo-500">
+                  <a className="font-semibold text-green-600 hover:text-green-500">
                     Forgot password?
                   </a>
                 </div>
@@ -85,7 +85,7 @@ export default function Login(){
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-green-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                Login
               </button>
@@ -94,7 +94,7 @@ export default function Login(){
 
           <p className="mt-10 text-center text-sm/6 text-gray-500">
             Don't have an account? {""}
-            <a href="/signup" className="font-semibold text-indigo-600 hover:text-indigo-500">
+            <a href="/signup" className="font-semibold text-green-600 hover:text-green-500">
               Sign up Here
             </a>
           </p>

@@ -121,7 +121,7 @@ We are committed to protecting your privacy and will never sell, share, or misus
                 </div>
 
                 <div className='flex justify-center'>
-                    <button type='submit' className='flex w-64 mt-12 justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>Submit</button>
+                    <button type='submit' className='flex w-64 mt-12 justify-center rounded-md bg-green-700 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>Submit</button>
                 </div>
             </form>
         </div>

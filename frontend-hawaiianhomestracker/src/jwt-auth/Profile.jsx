@@ -13,13 +13,13 @@ export default function Profile(){
     return(
         <>
            <div className="max-w-md p-6 mt-6 mx-auto"> 
-            <h1 className="text-center font-bold text-4xl">Welcome</h1>
-            <p className="text-center">{username}</p>
+            <h1 className="text-center font-bold text-7xl">Welcome</h1>
+            <p className="text-center text-3xl mt-4">{username}</p>
             </div>
              
              {/*  CARDS */}
              <div className="bg-white" >
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-15 lg:max-w-7xl lg:px-8">
         <h2 className="text-4xl font-bold tracking-tight text-gray-900">Actions</h2>
 
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
@@ -40,7 +40,7 @@ export default function Profile(){
                       CREATE AN APPLICATION
                    </Link>
                   </h3>
-                    <p className="mt-1 text-sm text-gray-500">placeholder text</p>
+                    <p className="mt-1 text-sm text-gray-500">Enter information from your DHHL application and we will track it for you</p>
                 </div>
                 
               </div>
@@ -62,7 +62,7 @@ export default function Profile(){
                       UPDATE AN APPLICATION
                     </Link>
                   </h3>
-                  <p className="mt-1 text-sm text-gray-500">placeholder text</p>
+                  <p className="mt-1 text-sm text-gray-500">Update any previously submitted application</p>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@ export default function Profile(){
                       DELETE AN APPLICATION
                     </Link>
                   </h3>
-                  <p className="mt-1 text-sm text-gray-500">placeholder text</p>
+                  <p className="mt-1 text-sm text-gray-500">Delete your applications submitted</p>
                 </div>
               </div>
             </div>
@@ -105,7 +105,7 @@ export default function Profile(){
                       VIEW ALL APPLICATIONS
                     </Link>
                   </h3>
-                  <p className="mt-1 text-sm text-gray-500">placeholder text</p>
+                  <p className="mt-1 text-sm text-gray-500">View all applications submitted</p>
                 </div>
               </div>
             </div>

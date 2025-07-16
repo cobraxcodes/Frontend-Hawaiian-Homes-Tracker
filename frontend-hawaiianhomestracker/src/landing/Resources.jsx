@@ -22,10 +22,10 @@ const resources = [
   },
 {
     id:2,
-    name: 'Emergency Rental and Utilities',
+    name: 'Assistance Directory',
     href: '/help',
     imageSrc: cardThree,
-    description: 'State provided assistance '
+    description: 'Assistance for scholarships, legal assistance, behavioral health and more '
 },
 {
    id:3,
@@ -53,7 +53,7 @@ export default function Resources() {
               />
               <div className="mt-4 flex justify-between">
                 <div>
-                  <h3 className="text-sm text-gray-700">
+                  <h3 className="text-sm font-bold text-xl text-gray-700">
                     <Link to={resources.href} target='_blank'>
                       <span aria-hidden="true" className="absolute inset-0" />
                       {resources.name}

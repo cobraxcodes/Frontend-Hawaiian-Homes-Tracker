@@ -13,7 +13,7 @@ export default function Contribute() {
           href="https://github.com/cobraxcodes/Hawaiian-Homes-Tracker"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-indigo-600 text-white text-lg font-semibold px-6 py-3 rounded-md shadow hover:bg-indigo-500 transition mb-8"
+          className="inline-block bg-green-600 text-white text-lg font-semibold px-6 py-3 rounded-md shadow hover:bg-indigo-500 transition mb-8"
         >
           View the GitHub Repo
         </a>

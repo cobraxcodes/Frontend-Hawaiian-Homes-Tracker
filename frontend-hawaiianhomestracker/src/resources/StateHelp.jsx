@@ -80,13 +80,18 @@ const resources = [
 
 const ResourceCard = ({ title, description, links }) => {
   return (
-    <div style={styles.card}>
-      <h2 style={styles.title}>{title}</h2>
-      <p style={styles.description}>{description}</p>
-      <ul style={styles.linkList}>
+    <div className="bg-green-700 p-6 mb-6 rounded-lg shadow-md opacity-90">
+      <h2 className="text-white text-2xl font-bold mb-3">{title}</h2>
+      <p className="text-white text-lg mb-4">{description}</p>
+      <ul className="list-none p-0">
         {links.map(({ label, url }) => (
-          <li key={url} style={styles.linkItem}>
-            <a href={url} target="_blank" rel="noopener noreferrer" style={styles.link}>
+          <li key={url} className="mb-2">
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-300 font-semibold hover:underline"
+            >
               {label}
             </a>
           </li>
@@ -98,59 +103,13 @@ const ResourceCard = ({ title, description, links }) => {
 
 export default function StateHelp() {
   return (
-    <div style={styles.container}>
-      <h1 style={styles.header}>State Assistance Resources for Native Hawaiians</h1>
+    <div className="max-w-5xl mx-auto my-10 px-5 font-sans bg-white">
+      <h1 className="text-center text-4xl font-extrabold text-teal-800 mb-10 border-b-4 border-teal-600 pb-4">
+        State Assistance Resources for Native Hawaiians
+      </h1>
       {resources.map((res) => (
         <ResourceCard key={res.title} {...res} />
       ))}
     </div>
   );
 }
-
-const styles = {
-  container: {
-    maxWidth: 900,
-    margin: "40px auto",
-    padding: "0 20px",
-    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-    backgroundColor: "#fefefe",
-  },
-  header: {
-    textAlign: "center",
-    color: "#078660ff",
-    marginBottom: 30,
-    fontWeight: "700",
-    fontSize: "2.5rem",
-    borderBottom: "3px solid #0097a7",
-    paddingBottom: 10,
-  },
-  card: {
-    backgroundColor: "#619373ff",
-    padding: 20,
-    marginBottom: 25,
-    borderRadius: 10,
-    boxShadow: "0 3px 8px rgba(0,0,0,0.1)",
-  },
-  title: {
-    color: "#ffffffff",
-    marginBottom: 10,
-    fontSize: "1.75rem",
-  },
-  description: {
-    fontSize: "1.1rem",
-    marginBottom: 15,
-    color: "#ffffffff",
-  },
-  linkList: {
-    listStyleType: "none",
-    paddingLeft: 0,
-  },
-  linkItem: {
-    marginBottom: 8,
-  },
-  link: {
-    textDecoration: "none",
-    color: "#076943ff",
-    fontWeight: "600",
-  },
-};

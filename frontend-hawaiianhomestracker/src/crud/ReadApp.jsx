@@ -31,7 +31,7 @@ export default function ReadApp(){
        </div>
  
 
-     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+     <div className=" min-h-[calc(78vh-200px)] mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
 
     {/* Loading / Error States */}
     {isLoading && <p className="text-center">Finding Submitted Applications </p>}

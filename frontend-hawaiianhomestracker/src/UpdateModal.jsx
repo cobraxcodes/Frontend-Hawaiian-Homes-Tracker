@@ -68,7 +68,7 @@ export default function UpdateModal({ isOpen, onClose, onSave, app }) {
             onClick={() =>
               onSave({ name, applicationDate: date, areaCode: area, zipcode })
             }
-            className="px-3 py-1 bg-indigo-600 text-white rounded"
+            className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-800"
           >
             Save
           </button>

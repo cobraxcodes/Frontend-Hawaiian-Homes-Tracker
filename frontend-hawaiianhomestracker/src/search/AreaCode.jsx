@@ -46,12 +46,12 @@ export default function AreaCode(){
     return (
          <>
        <div className="mb-8 text-center">
-       <h1 className="text-3xl font-bold text-gray-900  mt-24">Search By Areacode</h1>
+       <h1 className="text-4xl font-bold text-gray-900  mt-24">Search By Areacode</h1>
        </div>
  
 
     {/* Search Form */}
-     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
     <form className="max-w-md mx-auto mb-12" onSubmit={handleInput}>
       <label htmlFor="lastname-search" className="mb-2 text-sm font-medium text-gray-900 sr-only">
         Search By Areacode
@@ -67,7 +67,7 @@ export default function AreaCode(){
         />
         <button
           type="submit"
-          className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
+          className="text-white absolute end-2.5 bottom-2.5 bg-green-500 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
         >
           Search
         </button>
@@ -76,7 +76,7 @@ export default function AreaCode(){
 
 
     {/* Loading / Error States */}
-    {isLoading && <p className="text-center">Finding Applications from Areacode: {input}</p>}
+    {isLoading && <p className="text-center text-xl"> Loading Applications. Please Wait {input}</p>}
     {isError && (
       <p className="text-red-600 text-center">
         {error.response?.status === 404
@@ -108,8 +108,8 @@ export default function AreaCode(){
 
 
         {!input && ( <div className="flex items-center gap-24 justify-center border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
-    <button onClick={prev} disabled={page === 1} className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Prev</button>
-    <button onClick={next}  className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</button>
+    <button onClick={prev} disabled={page === 1} className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-green-300">Prev</button>
+    <button onClick={next}  className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-green-500">Next</button>
   </div>)}
  
 

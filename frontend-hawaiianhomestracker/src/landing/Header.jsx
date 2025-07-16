@@ -84,7 +84,7 @@ export default function Header() {
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
                   >
                     <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-indigo-600" />
+                      <item.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-green-600" />
                     </div>
                     <div className="flex-auto">
                       <Link to={item.href} className="block font-semibold text-gray-900">
@@ -147,14 +147,15 @@ export default function Header() {
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
                     {[...products].map((item) => (
-                      <DisclosureButton
+                      <a
                         key={item.name}
                         as="a"
                         href={item.href}
                         className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
+                        onClick={() => setMobileMenuOpen(false)}
                       >
                         {item.name}
-                      </DisclosureButton>
+                      </a>
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
@@ -162,34 +163,39 @@ export default function Header() {
                   href="https://dhhl.hawaii.gov/applications/applying-for-hawaiian-home-lands/"
                   target='_blank'
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    onClick={() => setMobileMenuOpen(false)}
                 >
                   Apply
                 </a>
                 <Link 
                   to="/resources"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    onClick={() => setMobileMenuOpen(false)}
                 >
                   Resources
                 </Link>
                 <Link
                   to="/profile"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    onClick={() => setMobileMenuOpen(false)}
                 >
                   Profile
                 </Link>
               </div>
               <div className="py-6">
-                {!login?(<a
+                {!login?(<Link
                   id='#loginBtn'
-                  href="/login"
+                  to="/login"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    onClick={() => setMobileMenuOpen(false)}
                 >
                   Log in
-                </a>):(
+                </Link>):(
                   <a
                   onClick={handleLogout}
                   navigate="/home"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                
                 >
                   Log out
                 </a>
