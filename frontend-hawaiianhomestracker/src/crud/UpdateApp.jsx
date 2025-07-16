@@ -1,7 +1,7 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
 import axios from "axios"
 import { ToastContainer, toast } from "react-toastify"
-import UpdateModal from "../updateModal"
+import UpdateModal from "../UpdateModal"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
