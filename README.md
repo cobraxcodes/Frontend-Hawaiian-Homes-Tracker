@@ -7,7 +7,7 @@ This app serves to tie with the previously created backend API and serve as the 
 
 
 ## Technologies Used
-React, Tailwind, Vite, react-router-dom, HTML, CSS, Javascript, lazy-loading, Vitest, Cypress, 
+React, Tailwind, Vite, react-router-dom, HTML, CSS, Javascript, lazy-loading, Vitest, Toastify, formsubmit, axios, tanstack/usequery
 
 ## WIREFRAME
 [Link To Figma](https://www.figma.com/design/FHDxiXAG9o5T7hcL21rkSd/Hawaiian-Homes-Tracker-Frontend?node-id=0-1&t=rF6TZyf37axSCEBn-1)
