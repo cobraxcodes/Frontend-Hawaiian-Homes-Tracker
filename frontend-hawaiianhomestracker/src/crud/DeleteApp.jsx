@@ -96,7 +96,7 @@ export default function DeleteApp(){
             <p className="text-gray-700"><span className="font-semibold">Zipcode:</span> {app.zipcode}</p>
 
             <div className="text-right " onClick={() => handleDelete(app.userCreatedApplicationId)}>
-                <button className="mt-12 flex w-full justify-center rounded-md bg-green-800 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Delete</button>
+                <button data-cy='delete-btn' className="mt-12 flex w-full justify-center rounded-md bg-green-800 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Delete</button>
                 </div>
           </div>
         ))}
