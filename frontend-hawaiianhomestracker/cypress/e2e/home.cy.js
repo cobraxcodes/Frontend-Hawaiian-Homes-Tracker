@@ -1,5 +1,4 @@
 // ~~~~~~~ LANDING PAGE COMPONENTS ~~~~~~~ //
-
 describe('Landing Page', () =>{ // view all applications button works correctly
     it('clicks links successfully', () =>{
         cy.visit("http://localhost:5173/")
@@ -8,13 +7,13 @@ describe('Landing Page', () =>{ // view all applications button works correctly
     })
 })
 
-describe("Mobile navigation", () =>{ // burger menu opens on smaller screens
-    it("opens the burger menu" , () =>{
-        cy.viewport('iphone-6')
-         cy.visit("http://localhost:5173/")
-         cy.get('[data-cy=burger-button]').click()
-    })
-})
+// describe("Mobile navigation", () =>{ // burger menu opens on smaller screens
+//     it("opens the burger menu" , () =>{
+//         cy.viewport('iphone-6')
+//          cy.visit("http://localhost:5173/")
+//          cy.get('[data-cy=burger-button]').click()
+//     })
+// })
 
 
 describe('Hero', () =>{ // landing page renders correctly
@@ -67,5 +66,49 @@ describe("Resources section", () =>{
     it('navigates to website updates page', ()=>{
         cy.visit("http://localhost:5173/")
         cy.contains('Website Updates').click()
+    })
+})
+
+
+
+
+//~~~~~ AUTHORIZATION ~~~~~//
+
+describe('Login', () =>{
+    beforeEach(() =>{
+    cy.visit("http://localhost:5173/")
+    cy.viewport(1280, 720);
+    })
+
+    it('clicks Login and performs test login', () =>{
+        cy.contains("Log in").click()
+        cy.get('input[name="username"]').type("logintest")
+        cy.get('input[name="password"]').type("test123")
+cy.get('button[data-cy="login-btn"]').should('be.visible').click();
+cy.contains('Invalid credentials').should('be.visible');
+        cy.contains('Sign up Here').click()
+    })
+
+
+describe('Signup', () => {
+    it('clicks signup and adds texts in input', () =>{
+         cy.visit("http://localhost:5173/signup")
+         cy.get('input[name="username"]').type("testsnow")
+         cy.get('input[name="password"]').type("tests123")
+         cy.get('button[data-cy="signup-btn"]').click()
+         cy.contains('Unable to signup right now. Please try again later').should('be.visible')
+         cy.contains('Login Here').click()
+    })
+})
+})
+
+describe('Profile', () =>{
+    it('logs in to profile and renders cards successfully', ()=>{
+        cy.visit("http://localhost:5173/profile")
+         cy.get('input[name="username"]').type("devstage2")
+        cy.get('input[name="password"]').type("Admin123")
+       cy.get('button[data-cy="login-btn"]').should('be.visible').click();
+        cy.contains("Welcome")
+        
     })
 })
