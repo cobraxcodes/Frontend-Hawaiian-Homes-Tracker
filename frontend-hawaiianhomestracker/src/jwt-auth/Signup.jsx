@@ -15,11 +15,11 @@ export default function Signup(){
         e.preventDefault()
         try{
             if(username.length < 6){
-                setSignupErr("Usernames must be at least have 6 characters")
+                setSignupErr("Usernames must have at least 6 characters")
                 return;
             }
             if(password.length < 8){
-                setSignupErr("Passwords must be at least 8 characters")
+                setSignupErr("Passwords must have at least 8 characters")
                 return;
             }
             const URL = "https://hawaiian-homes-tracker.onrender.com/applications/signup"
@@ -87,6 +87,7 @@ export default function Signup(){
 
             <div>
               <button
+                data-cy = "signup-btn"
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-green-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
