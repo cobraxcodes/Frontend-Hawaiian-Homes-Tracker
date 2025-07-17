@@ -1,5 +1,5 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import { useState, lazy, Suspense } from 'react'
+import { useState, lazy, Suspense, useEffect } from 'react'
 import { Context } from './Context'
 import Protect from './jwt-auth/Protect'
 import Resources from './landing/Resources'
@@ -19,6 +19,7 @@ import About from './contact/About'
 import StateHelp from './resources/StateHelp'
 import Information from './resources/Information'
 import Updates from './resources/Updates'
+import { inject } from '@vercel/analytics'
 
 
 //lazy load applications
@@ -38,6 +39,10 @@ function App(){
   const [area, setArea]=useState("")
   const [rank,setRank]=useState("")
   const [zipcode,setZipcode]=useState("")
+
+  useEffect(() =>{
+    inject()
+  }, [])
 
    return(
     <Context.Provider value={{login,setLogin,username,setUsername,password,setPassword, fullname, setFullname, date, setDate, rank, setRank, area, setArea, zipcode, setZipcode}}>
